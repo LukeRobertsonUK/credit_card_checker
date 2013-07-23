@@ -1,5 +1,3 @@
-require 'pry'
-
 def valid_number(number_string)
   reversed_number_array = number_string.delete(' ').split("").reverse
   new_reversed_array = []
