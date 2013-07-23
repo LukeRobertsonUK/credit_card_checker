@@ -39,10 +39,11 @@ def find_card_type(number_string)
   end
 end
 
+line_width = 62
 f = File.new('card_numbers.txt', 'r')
 f.each do |line|
   number_string = line.chomp.to_s
-  puts "#{find_card_type(number_string)}: #{number_string}\t (#{valid_number(number_string)})"
+  puts (("#{find_card_type(number_string).upcase}: #{number_string}").ljust(line_width/2) + ("(#{valid_number(number_string)})").rjust(line_width/2))
 end
 
 
